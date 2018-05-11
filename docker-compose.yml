@@ -12,7 +12,7 @@ services:
     image: shoes/catalog
     environment:
       - DatabaseServer=mssqlserver
-      - DatabaseNAme=CatalogDb
+      - DatabaseName=CatalogDb
       - DatabaseUser=sa
       - DatabaseUserPassword=ProductApi(!)
     container_name: catalogapi
@@ -25,12 +25,16 @@ services:
       - mssqlserver
       
   mssqlserver:
-    image: "microsoft/mssql-server-linux:latest"
+    build:
+      context: .\src\Db
+      dockerfile: Dockerfile
     ports: 
-      - "1445:1443"    
+      - "1435:1433"
     container_name: mssqlcontainer
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=ProductApi(!)
+    healthcheck:
+      test: sqlcmd -S db1.internal.prod.example.com -U SA -P 'Alaska2017' -Q 'select 1'
     networks:
       - backend

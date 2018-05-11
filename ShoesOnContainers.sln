@@ -9,7 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{4AECEB7A-A15
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DCC7C3E3-ECC3-498E-AA2A-E6BF9AD2EDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalogApi", "src\Services\ProductCatalogApi\ProductCatalogApi.csproj", "{8D2F57F9-7E16-4F84-9B3E-8917F2951482}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogApi", "src\Services\ProductCatalogApi\ProductCatalogApi.csproj", "{8D2F57F9-7E16-4F84-9B3E-8917F2951482}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{DE4FCFB8-3838-4F33-BC29-875C2D61F284}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Db", "Db", "{3ECBE030-6C6A-4380-9AD3-872F6A7B6ADA}"
+	ProjectSection(SolutionItems) = preProject
+		src\Db\Dockerfile = src\Db\Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +39,7 @@ Global
 		{0010BF95-980C-46D2-BDAB-A9B9488F7145} = {DCC7C3E3-ECC3-498E-AA2A-E6BF9AD2EDBB}
 		{4AECEB7A-A155-49C2-AF1B-E8D664C3D3AE} = {DCC7C3E3-ECC3-498E-AA2A-E6BF9AD2EDBB}
 		{8D2F57F9-7E16-4F84-9B3E-8917F2951482} = {0010BF95-980C-46D2-BDAB-A9B9488F7145}
+		{3ECBE030-6C6A-4380-9AD3-872F6A7B6ADA} = {DCC7C3E3-ECC3-498E-AA2A-E6BF9AD2EDBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56ABA58F-599F-42A3-A0C4-24F1FD2C13C2}
