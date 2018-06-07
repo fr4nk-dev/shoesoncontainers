@@ -1,0 +1,12 @@
+﻿@model ShoesOnContainers.Web.WebMvc.Models.CatalogItem
+ 
+@*<form asp-controller="Cart" asp-action="AddToCart">*@
+<img class="esh-catalog-thumbnail" src="@Model.PictureUri" />
+    
+<div class="esh-catalog-name">
+    <span>@Model.Name</span>
+</div>
+<div class="esh-catalog-price">
+    <span>@Model.Price.ToString("N2")</span>
+</div>
+s

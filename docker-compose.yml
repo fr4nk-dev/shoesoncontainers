@@ -33,8 +33,6 @@ services:
     container_name: mssqlcontainer
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=ProductApi(!)
-    healthcheck:
-      test: sqlcmd -S db1.internal.prod.example.com -U SA -P 'Alaska2017' -Q 'select 1'
+      - SA_PASSWORD=ProductApi(!)     
     networks:
       - backend

@@ -25,7 +25,7 @@ namespace ProductCatalogApi
             var database = Configuration["DatabaseName"];
             var user = Configuration["DatabaseUser"];
             var pass = Configuration["DatabaseUserPassword"];
-            var connectionString = $"Server={server};Datbase={database};User={user};Password={pass}";
+            var connectionString = $"Server={server};Database={database};User={user};Password={pass}";
 
             services.AddDbContext<CatalogContext>(options => options.UseSqlServer(connectionString));
             services.AddMvc();
