@@ -12,7 +12,7 @@ namespace WebMvc.Controllers
 {
     public class CatalogController : Controller
     {
-        private ICatalogService _catalogSvc;
+        private readonly ICatalogService _catalogSvc;
 
         public CatalogController(ICatalogService catalogSvc)
         {

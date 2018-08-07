@@ -22,7 +22,9 @@ namespace TokenServiceApi
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("api1", "My API"),
+                new ApiResource("basket","Shopping Cart Api"),
+                new ApiResource("orders","Ordering Api")
             };
         }
 
@@ -76,6 +78,8 @@ namespace TokenServiceApi
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
+                        "orders",
+                        "basket",
                         "api1"
                     },
                     AllowOfflineAccess = true
